@@ -10,8 +10,15 @@ import DemoButton from "@/components/ui/projects/buttons/DemoButton";
 import GitHubButton from "@/components/ui/projects/buttons/GitHubButton";
 import ArticleButton from "@/components/ui/projects/buttons/ArticleButton";
 
-export default function ProjectPageClient({ project }: { param: Project }) {
-    if (!project) { redirect("/")}
+type Props = {
+    project: Project;
+}
+export default function ProjectPageClient(props: Props) {
+    const {project} = props;
+
+    if (!project) {
+        redirect("/")
+    }
 
     return (
         <Container sx={{paddingY: 5, minHeight: "90vh"}}>
@@ -20,10 +27,11 @@ export default function ProjectPageClient({ project }: { param: Project }) {
                 {project.images && (
                     <Grid container spacing={2} paddingY={2} style={{display: "flex"}}>
                         <img src={`../${project.images[0]}`} alt={`${project.slug}1`}
-                             style={{flex: 1, display: "flex", maxWidth:"100%", maxHeight: 300, objectFit: "cover"}}/>
+                             style={{flex: 1, display: "flex", maxWidth: "100%", maxHeight: 300, objectFit: "cover"}}/>
                     </Grid>)}
                 <Grid container spacing={2}>
-                    {project.technologies?.map((technology: Technology) => (<TechCard key={technology.name} technology={technology}/>))}
+                    {project.technologies?.map((technology: Technology) => (
+                        <TechCard key={technology.name} technology={technology}/>))}
                 </Grid>
                 <Typography flex={1} variant="subtitle1" textAlign="justify">{project.summary}</Typography>
                 <Stack direction="row" spacing={2}>
