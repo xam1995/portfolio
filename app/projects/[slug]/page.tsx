@@ -6,7 +6,7 @@ export async function generateStaticParams() {
     return slugs.map((slug) => ({slug}));
 }
 
-export default async function ProjectPage({params}: { params: { slug: string } }) {
+export default async function ProjectPage({params}: { params: { slug: Promise<string> } }) {
     const project = await getProjectBySlug(params.slug);
     return (<ProjectPageClient project={project}/>);
 }
