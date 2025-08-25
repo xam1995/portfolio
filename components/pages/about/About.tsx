@@ -1,11 +1,12 @@
 "use client"
 
-import {Avatar, Box, Container, Grid, Typography, useMediaQuery} from "@mui/material";
+import {Box, Container, Grid, Typography, useMediaQuery} from "@mui/material";
 import {Icon} from "@iconify/react";
 import {getAbout, getGitHub, getLinkedIn, getMailAddress, getProfilePicture} from "@/services/about/service";
 import SectionHeader from "@/components/ui/headers/SectionHeader";
 import MailButton from "@/components/ui/about/MailButton";
 import LinkedInButton from "@/components/ui/about/LinkedInButton";
+import Image from "next/image";
 
 export default function About() {
     const isBigScreen = useMediaQuery("(min-width: 600px)");
@@ -28,7 +29,7 @@ export default function About() {
                 alignItems: isBigScreen ? "initial" : "center",
             }}>
                 <div>
-                    <Avatar src={profilePictureUrl}
+                    <Image src={profilePictureUrl} width={150} height={150} alt="profile picture"
                             style={{minHeight: 150, minWidth: 150, marginBottom: 20}}/>
                     <Grid container spacing={1} justifyContent={isBigScreen ? "space-between" : "center"}>
                         <a href={gitHub} target="_blank">
