@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image";
 import {useMediaQuery} from "@mui/material";
 import Projects from "@/components/pages/projects/Projects";
 import CV from "@/components/pages/cv/CV";
@@ -20,7 +21,8 @@ export default function Home() {
             {isBigScreen ? <div style={{flex: "0 0 100vh", overflow: "hidden"}}>
                     <ParallaxHeader parallaxConfigs={getParallaxConfigs()}/>
                 </div>
-                : <img src={"/images/projects/portfolio_mountain_lake.webp"} alt="header" style={{width: "100%"}}/>}
+                : <Image src={"/images/projects/portfolio_mountain_lake.webp"} height={300} width={100} sizes="100vw"
+                         alt="header" style={{width: "100%", height: "auto"}}/>}
 
             {pages.map((page, index) => <SpringFade key={`page${index}`} children={page}/>)}
         </div>

@@ -2,6 +2,7 @@
 
 
 import {Project, Technology} from "@/data/model/types";
+import Image from "next/image";
 import {Container, Grid, Stack} from "@mui/system";
 import {redirect} from "next/navigation";
 import {Typography} from "@mui/material";
@@ -26,7 +27,7 @@ export default function ProjectPageClient(props: Props) {
                 <Typography variant="h3">{project.title}</Typography>
                 {project.images && (
                     <Grid container spacing={2} paddingY={2} style={{display: "flex"}}>
-                        <img src={`../${project.images[0]}`} alt={`${project.slug}1`}
+                        <Image sizes="100vw" width={100} height={300} src={`../${project.images[0]}`} alt={`${project.slug}1`}
                              style={{flex: 1, display: "flex", maxWidth: "100%", maxHeight: 300, objectFit: "cover"}}/>
                     </Grid>)}
                 <Grid container spacing={2}>
