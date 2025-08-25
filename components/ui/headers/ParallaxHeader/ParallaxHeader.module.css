@@ -1,0 +1,12 @@
+.container {
+    flex: 0 0 100vh;
+}
+
+.parallax {
+    background: rgb(3, 23, 44);
+    width: 100vw;
+}
+
+.parallax::-webkit-scrollbar {
+    display: none;
+}
