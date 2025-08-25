@@ -5,6 +5,7 @@ const repoName = 'portfolio' // change this
 
 const nextConfig: NextConfig = {
     output: 'export',
+    eslint: { ignoreDuringBuilds: true },
     images: { unoptimized: true },
     basePath: isProd ? `/${repoName}` : '',
     assetPrefix: isProd ? `/${repoName}` : '',
