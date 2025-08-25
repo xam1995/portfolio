@@ -9,7 +9,8 @@ export async function generateStaticParams() {
 export const dynamicParams = false;
 export const revalidate = false;
 
-export default async function ProjectPage({params}: { params: { slug: string } }) {
-    const project = await getProjectBySlug(params.slug);
+export default async function ProjectPage(props: PageProps<"/projects/[slug]">) {
+    const {slug} = await props.params;
+    const project = await getProjectBySlug(slug);
     return (<ProjectPageClient project={project}/>);
 }
