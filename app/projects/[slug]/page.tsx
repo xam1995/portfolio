@@ -2,7 +2,7 @@
 
 import {Container, Grid, Typography} from "@mui/material";
 import {redirect, useParams} from "next/navigation";
-import {getProjectBySlug} from "@/services/projects/service";
+import {getProjectBySlug, getProjects} from "@/services/projects/service";
 import {Project, Technology} from "@/data/model/types";
 import {Stack} from "@mui/system";
 import GitHubButton from "@/components/ui/projects/buttons/GitHubButton";
@@ -10,10 +10,14 @@ import DemoButton from "@/components/ui/projects/buttons/DemoButton";
 import ArticleButton from "@/components/ui/projects/buttons/ArticleButton";
 import {TechCard} from "@/components/ui/cv/TechCard/TechCard";
 
+export async function generateStaticParams() {
+    const slugs = getProjects().map(proj => proj.slug);
+    return slugs.map((slug) => ({ slug }));
+}
 
 export default function ProjectPage() {
     const {slug} = useParams();
-    let project: Project = getProjectBySlug(slug);
+    const project: Project = getProjectBySlug(slug);
 
     if (!project) { redirect("/")}
 
