@@ -10,13 +10,18 @@ export default function GitHubButton(props: Props) {
     if (!repoLink) return null;
 
     return (
-        <a href={repoLink} target="_blank">
-            <Grid container direction="row" alignItems="center">
-                <IconButton sx={{color: "rgb(188,188,188)"}}>
-                    <GitHub fontSize="small"/>
-                </IconButton>
-                <Typography sx={{color: "rgb(188,188,188)"}} variant="body2">GitHub</Typography>
-            </Grid>
-        </a>
+        <Grid container direction="row" alignItems="center">
+            <IconButton
+                sx={{color: "rgb(188,188,188)"}}
+                component="a"
+                href={repoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open GitHub repository"
+            >
+                <GitHub fontSize="small"/>
+            </IconButton>
+            <Typography sx={{color: "rgb(188,188,188)"}} variant="body2">GitHub</Typography>
+        </Grid>
     );
 }

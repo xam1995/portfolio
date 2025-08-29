@@ -10,10 +10,17 @@ export default function ParallaxHeader(props: Props) {
     const {parallaxConfigs} = props;
     const ref = useRef<IParallax>(null);
 
+    function scrollHeader() {
+        if (ref.current) ref.current.scrollTo(1);
+    }
+
     return (
-        <Parallax pages={2} ref={ref} className={styles.parallax} onClick={() => {
-            if (ref.current) ref.current.scrollTo(1);
-        }}>
+        <Parallax
+            pages={2}
+            ref={ref}
+            className={styles.parallax}
+            onClick={scrollHeader}
+        >
             {parallaxConfigs.map(layer => (
                 <ParallaxLayer key={layer.url}
                                factor={layer.config?.factor}

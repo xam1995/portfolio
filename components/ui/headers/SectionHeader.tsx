@@ -4,7 +4,6 @@ import {Icon} from "@iconify/react";
 type Props = {
     icon: string;
     label: string;
-    justifyContent?: boolean;
 }
 
 export default function SectionHeader(props: Props) {

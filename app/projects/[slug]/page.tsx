@@ -12,5 +12,5 @@ export const revalidate = false;
 export default async function ProjectPage(props: PageProps<"/projects/[slug]">) {
     const {slug} = await props.params;
     const project = await getProjectBySlug(slug);
-    return (<ProjectPageClient project={project}/>);
+    return (project && <ProjectPageClient project={project}/>);
 }

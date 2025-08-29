@@ -5,7 +5,7 @@ export interface Project {
     title: string;
     subtitle?: string;
     summary?: string;
-    images?: string[];
+    image: string;
     technologies?: Technology[];
     repoLink?: string;
     videoLink?: string;
@@ -14,10 +14,6 @@ export interface Project {
 
 export interface Technology {
     name: string;
-    isLanguage?: boolean;
-    isTool?: boolean;
-    isLibrary?: boolean;
-    isFramework?: boolean;
     slug?: string;
     set?: string;
 }

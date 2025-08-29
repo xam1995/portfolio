@@ -1,14 +1,29 @@
 import {animated, useInView, useSpring} from "@react-spring/web";
+import React, {Children, ReactNode} from "react";
 
-type Props = {
-    children: React.ReactNode;
+
+type SpringFadeProps = {
+    children: ReactNode;
 }
 
-export default function SpringFade(props: Props) {
+export default function SpringFade(props: SpringFadeProps) {
     const {children} = props;
     const [ref, inView] = useInView({once: true});
-    const styles = useSpring({opacity: inView ? 1 : 0, y: inView ? 0 : 16, config: {tension: 80, friction: 26}});
+    const styles = useSpring({
+        opacity: inView ? 1 : 0,
+        y: inView ? 0 : 16,
+        config:
+            {
+                tension: 80,
+                friction: 26
+            }
+    });
     return (
-        <animated.div ref={ref} style={{...styles, translateY: styles.y.to(v => `${v}px`)}}>{children}</animated.div>
+        <animated.div
+            ref={ref}
+            style={{...styles, translateY: styles.y.to(v => `${v}px`)}}
+        >
+            {Children.map(children, (child) => child)}
+        </animated.div>
     )
 }

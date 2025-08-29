@@ -24,7 +24,7 @@ export default function Home() {
                 : <Image src={"images/projects/portfolio_mountain_lake.webp"} height={300} width={100} sizes="100vw"
                          alt="header" style={{width: "100%", height: "auto"}}/>}
 
-            {pages.map((page, index) => <SpringFade key={`page${index}`} children={page}/>)}
+            {pages.map((page, index) => <SpringFade key={`page${index}`}>{page}</SpringFade>)}
         </div>
     )
         ;

@@ -5,7 +5,7 @@ import {darkTheme} from "@/components/style/theme";
 import {useState} from "react";
 import {useServerInsertedHTML} from "next/navigation";
 import {CacheProvider} from "@emotion/react";
-import {ThemeProvider} from "@mui/system";
+import {Theme, ThemeProvider} from "@mui/system";
 import {CssBaseline} from "@mui/material";
 import createEmotionServer from "@emotion/server/create-instance";
 
@@ -19,7 +19,7 @@ export default function ThemeRegistry({
                                           theme = darkTheme,
                                       }: {
     children: React.ReactNode;
-    theme?: any;
+    theme?: Theme;
 }) {
     const [cache] = useState(() => createEmotionCache());
     const { extractCriticalToChunks, constructStyleTagsFromChunks } = createEmotionServer(cache);

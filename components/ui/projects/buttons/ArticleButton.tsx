@@ -11,13 +11,18 @@ export default function ArticleButton(props: Props) {
     if (!articleLink) return null;
 
     return (
-        <a href={articleLink} target="_blank">
-            <Grid container direction="row" alignItems="center">
-                <IconButton sx={{color: "rgb(188,188,188)"}}>
-                    <ArticleOutlined fontSize="small"/>
-                </IconButton>
-                <Typography sx={{color: "rgb(188,188,188)"}} variant="body2">Read</Typography>
-            </Grid>
-        </a>
+        <Grid container direction="row" alignItems="center">
+            <IconButton
+                sx={{color: "rgb(188,188,188)"}}
+                component="a"
+                href={articleLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open Article"
+            >
+                <ArticleOutlined fontSize="small"/>
+            </IconButton>
+            <Typography sx={{color: "rgb(188,188,188)"}} variant="body2">Read</Typography>
+        </Grid>
     );
 }

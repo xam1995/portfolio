@@ -8,6 +8,7 @@ import ArticleButton from "@/components/ui/projects/buttons/ArticleButton";
 import styles from "./ProjectCard.module.css";
 import {TechCard} from "@/components/ui/cv/TechCard/TechCard";
 import Link from "next/link";
+import Image from "next/image";
 
 type Props = {
     project: Project;
@@ -19,8 +20,12 @@ export default function ProjectCard(props: Props) {
     return (
         <Paper className={styles.paper}>
             <Link  href={`projects\\${props.project.slug}`}>
-                <img src={project.images?.[0]} alt={project.slug + "-pic"}
-                     className={styles.image}/>
+                <Image src={project.image}
+                       alt={project.slug + "-pic"}
+                       className={styles.image}
+                       width={300}
+                       height={150}
+                />
                 <Grid container justifyContent={"space-between"}>
                     <Typography variant="h6" sx={{paddingX: 2}}
                                 fontWeight="bold">{project.title}</Typography>

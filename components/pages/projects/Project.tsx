@@ -17,18 +17,24 @@ type Props = {
 export default function ProjectPageClient(props: Props) {
     const {project} = props;
 
-    if (!project) {
-        redirect("/")
-    }
+    if (!project) redirect("/");
 
     return (
         <Container sx={{paddingY: 5, minHeight: "90vh"}}>
             <Grid container spacing={2} direction="column">
                 <Typography variant="h3">{project.title}</Typography>
-                {project.images && (
+                {project.image && (
                     <Grid container spacing={2} paddingY={2} style={{display: "flex"}}>
-                        <Image sizes="100vw" width={100} height={300} src={`../${project.images[0]}`} alt={`${project.slug}1`}
-                             style={{flex: 1, display: "flex", maxWidth: "100%", maxHeight: 300, objectFit: "cover"}}/>
+                        <Image sizes="100vw" width={100} height={300}
+                               src={`../${project.image}`}
+                               alt={`${project.slug}1`}
+                               style={{
+                                   flex: 1,
+                                   display: "flex",
+                                   maxWidth: "100%",
+                                   maxHeight: 300,
+                                   objectFit: "cover"
+                               }}/>
                     </Grid>)}
                 <Grid container spacing={2}>
                     {project.technologies?.map((technology: Technology) => (
