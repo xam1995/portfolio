@@ -38,7 +38,7 @@ export default function ProjectPageClient(props: Props) {
                     </Grid>)}
                 <Grid container spacing={2}>
                     {project.technologies?.map((technology: Technology) => (
-                        <TechCard key={technology.name} technology={technology}/>))}
+                        <TechCard key={`${technology.name}-${project.slug}-pp`} technology={technology}/>))}
                 </Grid>
                 <Typography flex={1} variant="subtitle1" textAlign="justify">{project.summary}</Typography>
                 <Stack direction="row" spacing={2}>

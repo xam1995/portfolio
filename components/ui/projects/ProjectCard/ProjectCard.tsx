@@ -19,7 +19,7 @@ export default function ProjectCard(props: Props) {
 
     return (
         <Paper className={styles.paper}>
-            <Link  href={`projects\\${props.project.slug}`}>
+            <Link href={`projects\\${props.project.slug}`}>
                 <Image src={project.image}
                        alt={project.slug + "-pic"}
                        className={styles.image}
@@ -30,7 +30,7 @@ export default function ProjectCard(props: Props) {
                     <Typography variant="h6" sx={{paddingX: 2}}
                                 fontWeight="bold">{project.title}</Typography>
                     <Grid container spacing={0.25} alignItems={"center"} paddingX={1}>
-                        {project.technologies?.slice(0, 3).map(tech => <TechCard key={`${project.slug}-${tech.name}`}
+                        {project.technologies?.slice(0, 3).map(tech => <TechCard key={`${project.slug}-${tech.name}-pc`}
                                                                                  technology={tech} isSmall={true}/>)}
                     </Grid>
                 </Grid>

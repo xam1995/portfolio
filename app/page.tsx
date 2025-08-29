@@ -15,14 +15,20 @@ export default function Home() {
     const isBigScreen = useMediaQuery("(min-width: 1024px)");
     const pages = [About(), CV(), Projects(), Contact()];
 
-
     return (
         <div style={{display: "flex", flexDirection: "column"}}>
             {isBigScreen ? <div style={{flex: "0 0 100vh", overflow: "hidden"}}>
                     <ParallaxHeader parallaxConfigs={getParallaxConfigs()}/>
                 </div>
-                : <Image src={"images/projects/portfolio_mountain_lake.webp"} height={300} width={100} sizes="100vw"
-                         alt="header" style={{width: "100%", height: "auto"}}/>}
+                : <Image
+                    src={"images/projects/portfolio_mountain_lake.webp"}
+                    height={300}
+                    width={100}
+                    sizes="100vw"
+                    alt="header"
+                    priority
+                    style={{width: "100%", height: "auto"}}
+                />}
 
             {pages.map((page, index) => <SpringFade key={`page${index}`}>{page}</SpringFade>)}
         </div>

@@ -1,7 +1,5 @@
 import {ParallaxConfig} from "@/data/model/types";
 
-export const PARALLAX_CONFIGS_HORIZONTAL: ParallaxConfig[] = []
-
 export const PARALLAX_CONFIGS: ParallaxConfig[] = [
 
     {
