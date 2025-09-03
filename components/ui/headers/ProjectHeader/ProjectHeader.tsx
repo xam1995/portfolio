@@ -20,7 +20,7 @@ export default function ProjectHeader(props: Props) {
                     <Image sizes="100vw"
                            width={100}
                            height={300}
-                           src={`../${project.image}`}
+                           src={project.image}
                            alt={`${project.slug}1`}
                            className={styles.image}
                     />
