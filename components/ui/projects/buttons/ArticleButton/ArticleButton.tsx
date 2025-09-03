@@ -1,5 +1,6 @@
 import {Grid, IconButton, Typography} from "@mui/material";
 import {ArticleOutlined} from "@mui/icons-material";
+import styles from "./ArticleButton.module.css";
 
 type Props = {
     articleLink: string | undefined;
@@ -13,7 +14,7 @@ export default function ArticleButton(props: Props) {
     return (
         <Grid container direction="row" alignItems="center">
             <IconButton
-                sx={{color: "rgb(188,188,188)"}}
+                className={styles.button}
                 component="a"
                 href={articleLink}
                 target="_blank"
@@ -22,7 +23,7 @@ export default function ArticleButton(props: Props) {
             >
                 <ArticleOutlined fontSize="small"/>
             </IconButton>
-            <Typography sx={{color: "rgb(188,188,188)"}} variant="body2">Read</Typography>
+            <Typography className={styles.text} variant="body2">Read</Typography>
         </Grid>
     );
 }

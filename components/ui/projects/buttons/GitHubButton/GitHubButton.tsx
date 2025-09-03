@@ -1,9 +1,11 @@
 import {Grid, IconButton, Typography} from "@mui/material";
 import {GitHub} from "@mui/icons-material";
+import styles from "./GitHubButton.module.css";
 
 type Props = {
     repoLink: string | undefined;
 };
+
 export default function GitHubButton(props: Props) {
     const {repoLink} = props;
 
@@ -12,7 +14,7 @@ export default function GitHubButton(props: Props) {
     return (
         <Grid container direction="row" alignItems="center">
             <IconButton
-                sx={{color: "rgb(188,188,188)"}}
+                className={styles.button}
                 component="a"
                 href={repoLink}
                 target="_blank"
@@ -21,7 +23,7 @@ export default function GitHubButton(props: Props) {
             >
                 <GitHub fontSize="small"/>
             </IconButton>
-            <Typography sx={{color: "rgb(188,188,188)"}} variant="body2">GitHub</Typography>
+            <Typography className={styles.text} variant="body2">GitHub</Typography>
         </Grid>
     );
 }

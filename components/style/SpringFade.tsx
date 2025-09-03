@@ -23,7 +23,7 @@ export default function SpringFade(props: SpringFadeProps) {
             ref={ref}
             style={{...styles, translateY: styles.y.to(v => `${v}px`)}}
         >
-            {Children.map(children, (child) => child)}
+            {Children.map(children, (child: ReactNode) => child)}
         </animated.div>
     )
 }

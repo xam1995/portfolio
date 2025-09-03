@@ -11,25 +11,22 @@ import createEmotionServer from "@emotion/server/create-instance";
 
 
 function createEmotionCache() {
-    return createCache({ key: 'mui', prepend: true });
+    return createCache({key: 'mui', prepend: true});
 }
 
-export default function ThemeRegistry({
-                                          children,
-                                          theme = darkTheme,
-                                      }: {
+export default function ThemeRegistry({children, theme = darkTheme}: {
     children: React.ReactNode;
     theme?: Theme;
 }) {
     const [cache] = useState(() => createEmotionCache());
-    const { extractCriticalToChunks, constructStyleTagsFromChunks } = createEmotionServer(cache);
+    const {extractCriticalToChunks, constructStyleTagsFromChunks} = createEmotionServer(cache);
 
     useServerInsertedHTML(() => {
         const chunks = extractCriticalToChunks('');
         return (
             <style
                 data-emotion={`${cache.key} ${chunks.styles.map((style) => style.key).join(' ')}`}
-                dangerouslySetInnerHTML={{ __html: constructStyleTagsFromChunks(chunks) }}
+                dangerouslySetInnerHTML={{__html: constructStyleTagsFromChunks(chunks)}}
             />
         );
     });
@@ -37,7 +34,7 @@ export default function ThemeRegistry({
     return (
         <CacheProvider value={cache}>
             <ThemeProvider theme={theme}>
-                <CssBaseline />
+                <CssBaseline/>
                 {children}
             </ThemeProvider>
         </CacheProvider>

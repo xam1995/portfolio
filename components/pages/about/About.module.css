@@ -1,0 +1,14 @@
+.image {
+    min-height: 150px;
+    min-width: 150px;
+    margin-bottom: 20px;
+}
+
+.text {
+    margin-top: 1.5vh;
+    letter-spacing: 0.25rem;
+    font-weight: 1000;
+    background: linear-gradient(to right, #FFFFFF, #0067b0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

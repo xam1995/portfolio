@@ -16,12 +16,12 @@ export const darkTheme = createTheme({
     },
     typography: {
         h4: {
-            background: "linear-gradient(45deg, #FFFFFF, #06b6d4)",
+            background: "linear-gradient(45deg, #FFFFFF, #0067b0)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
         },
         h6: {
-            background: "linear-gradient(to right, #FFFFFF, #06b6d4)",
+            background: "linear-gradient(to right, #FFFFFF, #0067b0)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
         }

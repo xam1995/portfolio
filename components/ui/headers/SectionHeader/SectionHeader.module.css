@@ -1,0 +1,31 @@
+.icon {
+    color: white;
+    font-size: 1.8rem;
+    transition: color 0.4s ease-in-out;
+}
+
+.div {
+    border: 1px solid lightgray;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    background: linear-gradient(45deg, #0a0a0a, #002c4c);
+    -webkit-background-clip: border;
+    -webkit-text-fill-color: transparent;
+}
+
+.icon:hover {
+    color: lightyellow;
+}
+
+.grid {
+    align-items: center;
+    padding-bottom: 5vh;
+}
+
+@media (max-width: 573px) {
+    .text { font-size: 1.8rem; }
+}

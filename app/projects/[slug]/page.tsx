@@ -1,5 +1,5 @@
 import {getProjectBySlug, getProjects} from "@/services/projects/service";
-import ProjectPageClient from "@/components/pages/projects/Project";
+import ProjectPageClient from "@/components/pages/projects/Project/Project";
 
 export async function generateStaticParams() {
     const slugs = getProjects().map(proj => proj.slug);

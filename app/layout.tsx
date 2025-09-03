@@ -2,6 +2,8 @@ import type {Metadata} from "next";
 import {Geist, Geist_Mono} from "next/font/google";
 import "./globals.css";
 import ThemeRegistry from "@/components/style/ThemeRegistry";
+import {getTabTitle} from "@/services/about/service";
+import {ReactNode} from "react";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -14,14 +16,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "Max | Software Developer | Angular, React, Java",
+    title: getTabTitle()
 };
 
-export default function RootLayout({
-                                       children,
-                                   }: Readonly<{
-    children: React.ReactNode;
-}>) {
+export default function RootLayout({children}: Readonly<{children: ReactNode}>) {
     return (
         <html lang="en">
         <body className={`${geistSans.variable} ${geistMono.variable}`}>

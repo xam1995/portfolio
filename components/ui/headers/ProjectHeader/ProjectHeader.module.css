@@ -1,0 +1,13 @@
+.image {
+    flex: 1;
+    display: flex;
+    max-width: 100vw;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.div {
+    display: flex;
+    padding-bottom: 1vh;
+    padding-top: 1vh;
+}

@@ -12,11 +12,26 @@ type Props = {
 export function TechCard(props: Props) {
     const {technology, isSmall} = props;
 
+    function adjustSize(): number {
+        if (isSmall) return 26;
+        return 50;
+    }
+
+    function adjustFontSize(): string {
+        if (isSmall) return "1.3rem";
+        return "1.8rem";
+    }
+
+    function adjustBorder(): string | undefined{
+        if (isSmall) return "none";
+        return undefined;
+    }
+
     return (
         <Tooltip key={technology.name + "-hint"} title={technology.name}>
             <Paper key={technology.name} className={styles.paper}
-                   style={{border: isSmall ? "none" : undefined, height: isSmall ? 26 : 50, width: isSmall ? 26 : 50}}>
-                <Icon icon={`${technology?.set}:${technology?.slug}`} fontSize={isSmall ? "1.3rem" : "1.8rem"}/>
+                   style={{border: adjustBorder(), height: adjustSize(), width: adjustSize()}}>
+                <Icon icon={`${technology?.set}:${technology?.slug}`} fontSize={adjustFontSize()} className={styles.icon}/>
             </Paper>
         </Tooltip>
     );

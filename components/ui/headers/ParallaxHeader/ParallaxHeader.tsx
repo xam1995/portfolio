@@ -6,12 +6,30 @@ import styles from "./ParallaxHeader.module.css";
 type Props = {
     parallaxConfigs: ParallaxConfig[];
 }
+
 export default function ParallaxHeader(props: Props) {
     const {parallaxConfigs} = props;
     const ref = useRef<IParallax>(null);
 
     function scrollHeader() {
-        if (ref.current) ref.current.scrollTo(1);
+        if (ref.current) ref.current.scrollTo(0.9);
+    }
+
+    function determineTop(layer: ParallaxConfig): string | undefined {
+        if (layer.config?.horizontal) return "100vh";
+        return undefined;
+    }
+
+    function determineWidth(layer: ParallaxConfig): string {
+        return `${100 + (layer.extraWidth ?? 0)}vw`;
+    }
+
+    function determineUrl(layer: ParallaxConfig): string {
+        return `url(${layer.url})`;
+    }
+
+    function determineScaling(layer: ParallaxConfig): string {
+        return layer.fixedHeight ? "100%" : "100% auto";
     }
 
     return (
@@ -28,12 +46,11 @@ export default function ParallaxHeader(props: Props) {
                                horizontal={layer.config?.horizontal}
                                offset={layer.config?.offset}
                                style={{
-                                   width: layer.url.endsWith("5.webp") ? "109vw" : "100vw",
-                                   backgroundImage: `url(${layer.url})`,
-                                   backgroundSize: "100% auto",
-                                   top: layer.config?.horizontal ? "100vh" : undefined,
+                                   width: determineWidth(layer),
+                                   backgroundImage: determineUrl(layer),
+                                   backgroundSize: determineScaling(layer),
+                                   top: determineTop(layer),
                                }}/>))}
         </Parallax>
-
     );
 }

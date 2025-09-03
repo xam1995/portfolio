@@ -21,6 +21,7 @@ export const PARALLAX_CONFIGS: ParallaxConfig[] = [
     },
     {
         url: "images/parallax/portfolio_mountain_lake_5.webp",
+        extraWidth: 9,
         config: {
             factor: 2,
             speed: 0.1,
@@ -55,6 +56,7 @@ export const PARALLAX_CONFIGS: ParallaxConfig[] = [
     },
     {
         url: "images/parallax/portfolio_mountain_lake_1.webp",
+        fixedHeight: true,
         config: {
             factor: 2,
             offset: 0.1

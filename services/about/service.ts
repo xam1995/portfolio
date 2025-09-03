@@ -1,4 +1,15 @@
-import {ABOUT, CALL_TO_ACTION, EMAIL_ADDRESS, GITHUB_LINK, LINKEDIN_LINK, PROFILE_PICTURE_URL} from "@/data/about/data";
+import {
+    ABOUT,
+    CALL_TO_ACTION,
+    EMAIL_ADDRESS,
+    GITHUB_LINK,
+    JOB_TITLE,
+    LINKEDIN_LINK,
+    NAME,
+    TAB_TITLE,
+    TECH
+} from "@/data/about/data";
+import {getImage} from "@/services/images/service";
 
 export function getAbout(): string {
     return ABOUT;
@@ -17,9 +28,25 @@ export function getMailAddress(): string {
 }
 
 export function getProfilePicture(): string {
-    return PROFILE_PICTURE_URL;
+    return getImage("about", "profile.webp");
 }
 
 export function getCallToAction(): string {
     return CALL_TO_ACTION;
+}
+
+export function getTabTitle(): string {
+    return TAB_TITLE;
+}
+
+export function getName(): string {
+    return NAME;
+}
+
+export function getJobTitle(): string {
+    return JOB_TITLE;
+}
+
+export function getTech(): string {
+    return TECH;
 }

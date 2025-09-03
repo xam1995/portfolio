@@ -1,0 +1,13 @@
+.container {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid {
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+}

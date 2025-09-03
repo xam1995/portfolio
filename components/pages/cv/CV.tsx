@@ -2,11 +2,11 @@ import {Container} from "@mui/material";
 import {getJobs} from "@/services/jobs/service";
 import {Certification, Education, Job} from "@/data/model/types";
 import {getCertifications, getDegrees, getEducation} from "@/services/education/service";
-import JobSection from "@/components/ui/cv/sections/JobSection";
-import EducationSection from "@/components/ui/cv/sections/EducationSection";
-import CertificationSection from "@/components/ui/cv/sections/CertificationSection";
-import DegreeSection from "@/components/ui/cv/sections/DegreeSection";
-import SectionHeader from "@/components/ui/headers/SectionHeader";
+import JobSection from "@/components/ui/cv/sections/JobSection/JobSection";
+import EducationSection from "@/components/ui/cv/sections/EducationSection/EducationSection";
+import CertificationSection from "@/components/ui/cv/sections/CertificationSection/CertificationSection";
+import DegreeSection from "@/components/ui/cv/sections/DegreeSection/DegreeSection";
+import SectionHeader from "@/components/ui/headers/SectionHeader/SectionHeader";
 
 
 export default function CV() {

@@ -1,0 +1,21 @@
+.grid {
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.item {
+    padding: 0;
+}
+
+.duration {
+    color: lightgray;
+}
+
+.circle {
+    font-size: 0.75rem;
+    color: white;
+}
+
+.box {
+    padding-bottom: 5vh;
+}

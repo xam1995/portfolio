@@ -40,15 +40,12 @@ export interface Certification {
     title: string;
     organization: string;
     time: string;
+    link?: string;
 }
-
-export interface Language {
-    name: string;
-    level: string;
-}
-
 
 export interface ParallaxConfig {
     url: string;
+    extraWidth?: number;
+    fixedHeight?: boolean;
     config?: ParallaxLayerProps;
 }
