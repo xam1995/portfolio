@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 
-const isGhPages = process.env.GITHUB_ACTIONS === 'true';
+const isGhPages = process.env.NODE_ENV === 'production';
 const repoName = 'portfolio'
 
 const nextConfig: NextConfig = {
