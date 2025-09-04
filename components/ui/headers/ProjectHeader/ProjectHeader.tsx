@@ -26,7 +26,7 @@ export default function ProjectHeader(props: Props) {
                     />
                 </div>)
             }
-            <Grid container spacing={2}>
+            <Grid container spacing={2} className={styles.grid}>
                 {project.technologies?.map((technology: Technology) => (
                     <TechCard key={`${technology.name}-${project.slug}-pp`} technology={technology}/>))}
             </Grid>

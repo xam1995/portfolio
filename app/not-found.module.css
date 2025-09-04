@@ -15,5 +15,9 @@
 .image {
     width: 100vw;
     height: 300px;
-    object-fit: contain;
+    object-fit: cover;
+}
+
+.text {
+    text-align: center;
 }

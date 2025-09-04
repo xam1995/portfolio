@@ -1,7 +1,7 @@
 const BASE_PATH = "images/"
 
 export function getNotFoundImage() {
-    return getImage("parallax", "portfolio_mountain_lake_7.webp")
+    return getImage("notfound", "notfound.webp")
 }
 
 export function getImage(directory: string, name: string) {

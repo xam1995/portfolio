@@ -8,6 +8,11 @@
 
 .div {
     display: flex;
-    padding-bottom: 1vh;
-    padding-top: 1vh;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+}
+
+.grid {
+    align-items: center;
+    justify-content: space-between;
 }
