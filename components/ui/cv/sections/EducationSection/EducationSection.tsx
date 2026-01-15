@@ -17,7 +17,7 @@ export default function EducationSection(props: Props) {
         <Box className={styles.box}>
             <Grid container spacing={2} className={styles.grid}>
                 <Typography variant="h6">{ed.title}</Typography>
-                <Typography variant="body1">{ed.startDate} - {ed.endDate}</Typography>
+                <Typography variant="body1" className={styles.duration}>{ed.startDate} - {ed.endDate}</Typography>
             </Grid>
             <Typography variant="subtitle2">{ed.organization}</Typography>
             <List>
