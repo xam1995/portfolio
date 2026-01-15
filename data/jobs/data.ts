@@ -3,11 +3,11 @@ import {TECHNOLOGIES} from "@/data/technologies/data";
 
 export const JOBS: Job[] = [
     {
-        title: "FULL-STACK DEVELOPER",
+        title: "FULL-STACK ENGINEER",
         startDate: "Jul 2023",
         endDate: "Present",
         employer: "KUEHNE + NAGEL | AIR LOGISTICS",
-        bulletPoints: ["designed and implemented new features for pharmaceutical shipments, reducing annual demurrage expenses by several million euros", "collaborated with UI/UX designers to revamp and simplify screens to reduce processing times", "improved project-wide code quality by enhancing code generation algorithms by 15%, eliminating generated code smells in classes and interfaces"],
+        bulletPoints: ["designed and implemented business-critical features for temperature-controlled pharmaceutical shipments, reducing annual demurrage expenses by several million euros", "designed and developed compliance-focused features in line with EU and US regulations, reducing risk in ransporting dangerous goods on airplanes and synchronizing customs data for US entry", "collaborated with 5 engineers to design and implement tests following the testing pyramid, increasing code coverage to 90%", "reduced long-term operational risk by enhancing code generation algorithms by 15%, eliminating generated code smells in classes and interfaces"],
         technologies: [TECHNOLOGIES[0], TECHNOLOGIES[2], TECHNOLOGIES[4], TECHNOLOGIES[5], TECHNOLOGIES[21], TECHNOLOGIES[14], TECHNOLOGIES[10], TECHNOLOGIES[9], TECHNOLOGIES[8]],
     },
     {
@@ -19,16 +19,7 @@ export const JOBS: Job[] = [
         technologies: [TECHNOLOGIES[7], TECHNOLOGIES[1], TECHNOLOGIES[4], TECHNOLOGIES[6], TECHNOLOGIES[3], TECHNOLOGIES[15]]
     },
     {
-        title: "UNIVERSITY ADMINISTRATOR",
-        startDate: "May 2019",
-        endDate: "Aug 2020",
-        employer: "FREE UNIVERSITY BERLIN | ERASMUS+",
-        bulletPoints: ["led initiative to optimize internal workflows with automation, prediction algorithm and digitalization by up to 85% in\n" +
-        "efficiency", "redesigned wiki to provide a better student experience and reduce internal workload by 30%", "tracked and improved 1800 students’ experiences through data analysis"],
-        technologies: [TECHNOLOGIES[1], TECHNOLOGIES[3], TECHNOLOGIES[15], TECHNOLOGIES[22], TECHNOLOGIES[23]]
-    },
-    {
-        title: "JUNIOR RESEARCHER",
+        title: "JUNIOR DATA ANALYST",
         startDate: "May 2017",
         endDate: "Apr 2018",
         employer: "AUDIO-VISUAL RHETORICS OF AFFECT “CINEPOETICS”",

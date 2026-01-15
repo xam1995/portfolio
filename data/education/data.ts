@@ -3,7 +3,7 @@ import {TECHNOLOGIES} from "@/data/technologies/data";
 
 export const EDUCATION: Education[] = [
     {
-        title: "BRIGHTS JAVA BOOTCAMP",
+        title: "BOOTCAMP JAVA",
         startDate: "Mar 2023",
         endDate: "Jun 2023",
         organization: "BRIGHTS LEARNING | ACADEMIC WORK",
@@ -11,7 +11,7 @@ export const EDUCATION: Education[] = [
         technologies: [TECHNOLOGIES[0], TECHNOLOGIES[2], TECHNOLOGIES[4], TECHNOLOGIES[5]],
     },
     {
-        title: "M.A. THESIS PROJECT",
+        title: "MACHINE LEARNING PROJECT",
         startDate: "Nov 2020",
         endDate: "May 2021",
         organization: "STOCKHOLM UNIVERSITY",
