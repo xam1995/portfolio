@@ -40,3 +40,13 @@ a {
         color-scheme: dark;
     }
 }
+
+@media (max-width: 600px) {
+    .MuiListItemIcon-root {
+        min-width: 25px;
+    }
+
+    .MuiListItem-root {
+        align-items: baseline;
+    }
+}
